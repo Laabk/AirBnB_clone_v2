@@ -1,22 +1,26 @@
 #!/usr/bin/python3
-"""this process start Flask application
 """
-
+this process start Flask application
+"""
 from flask import Flask
+
+
 app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def index():
+def hello_hbnb():
     """
-    this content returns Hello HBNB!"""
-    return 'Hello HBNB!'
+    defines route" and returns HBNB
+    """
+    return "Hello HBNB!"
 
 
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
-    """returns HBNB"""
-    return 'HBNB'
+    """define hbnb route and returns HBNB
+    """
+    return "HBNB"
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', po
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)
